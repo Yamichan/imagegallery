@@ -41,7 +41,7 @@ function handleRequest(request, response){
 }
 
 // Create a server
-fs.readFile('.public/ImagesGallery/index.html', function (err, html) {
+fs.readFile('./public/ImagesGallery/index.html', function (err, html) {
     if (err) {
         throw err; 
     }       
