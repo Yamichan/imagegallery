@@ -1,7 +1,12 @@
 var express = require('express');
 var app = express();
-app.use(express.static(__dirname + '/public/ImagesGallery'));
-app.get( '/', ( req: any, res: any ) => {
-    res.sendFile( path.resolve( __dirname, '/public/ImagesGallery/index.html' ) );
-} );
-export = app;
+var path = require("path");
+app.use(express.static(path.resolve(__dirname + '/public/ImagesGallery')));
+app.get('/', function (req, res) {
+    res.sendFile(path.resolve(__dirname, '/public/ImagesGallery/index.html'));
+});
+
+app.listen(8080, function () {
+    console.log('This express angular app is listening on port:' + 8888);
+});
+module.exports = app;
